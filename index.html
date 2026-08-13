@@ -699,6 +699,43 @@ section{
   color:var(--c-cyan);
 }
 
+/* -------- clickable project cards -------- */
+.proj-card[data-link]{cursor:pointer;}
+.proj-card[data-link] .proj-card-body{padding-bottom:2.6rem;}
+.proj-links{
+  display:flex;flex-wrap:wrap;gap:.5rem;
+  position:relative;z-index:2;
+}
+.proj-link{
+  font-size:.6rem;letter-spacing:.05em;
+  padding:.32rem .8rem;
+  border:1px solid rgba(249,200,74,.35);
+  color:var(--gold2);
+  background:rgba(249,200,74,.06);
+  transition:all .3s;
+  display:inline-flex;align-items:center;gap:.3rem;
+  cursor:pointer;
+}
+.proj-link:hover{background:var(--gold);color:#000;border-color:var(--gold);}
+.proj-pass{
+  font-size:.58rem;letter-spacing:.05em;
+  color:var(--muted);
+  position:relative;z-index:1;
+}
+.proj-view-hint{
+  position:absolute;bottom:.9rem;right:1.2rem;
+  font-size:.58rem;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--c-cyan);
+  opacity:0;transform:translateX(-6px);
+  transition:all .35s;z-index:2;
+}
+.proj-card[data-link]:hover .proj-view-hint{opacity:1;transform:translateX(0);}
+.proj-locked-tag{
+  font-size:.58rem;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--muted);
+  position:relative;z-index:1;margin-top:auto;
+}
+
 /* ============================================
    CERTIFICATIONS — #certifications
 ============================================ */
@@ -966,7 +1003,7 @@ footer{
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="sev_index.html">Services</a></li>
+    <li><a href="index.html">Services</a></li>
     <li><a href="#certifications">Certifications</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -993,32 +1030,33 @@ footer{
   <div class="hero-glow-sphere"></div>
 
   <div class="hero-content">
-    <div class="hero-eyebrow">PHP Full-Stack Developer &amp; Creative Technologist</div>
+    <div class="hero-eyebrow">PHP Full-Stack Developer &amp; Data Analytics Professional</div>
     <h1 class="hero-title">
       Muthuraj<br><span class="gold">Balamurugan</span>
     </h1>
-    <div class="hero-subtitle-line">Crafting Digital Excellence</div>
+    <div class="hero-subtitle-line">Building Scalable Solutions with Code, Data &amp; AI</div>
     <p class="hero-desc">
-      A results-driven full-stack developer specialising in PHP, data analytics, 
-      and immersive web experiences. Blending technical precision with creative 
-      vision to build systems that perform and inspire.
+      A results-driven full-stack developer specialising in PHP with expertise in web development, 
+      data analytics, and AI-driven solutions. Combining technical expertise 
+      with creative problem-solving to build scalable, intelligent, and 
+      user-focused digital experiences.
     </p>
     <div class="hero-stats">
       <div>
-        <span class="hstat-num" data-target="10">0</span>
+        <span class="hstat-num" data-target="5">0</span>
         <span class="hstat-label">Projects Delivered</span>
       </div>
       <div>
-        <span class="hstat-num" data-target="3">0</span>
+        <span class="hstat-num" data-target="2">0</span>
         <span class="hstat-label">Years Experience</span>
       </div>
       <div>
-        <span class="hstat-num" data-target="5">0</span>
+        <span class="hstat-num" data-target="3">0</span>
         <span class="hstat-label">Technologies</span>
       </div>
     </div>
     <div class="hero-cta">
-      <a href="#projects" class="btn-gold">View Portfolio</a>
+      <a href="index.html" class="btn-gold">View Services</a>
       <a href="#contact" class="btn-ghost">Get in Touch</a>
     </div>
   </div>
@@ -1036,37 +1074,49 @@ footer{
     <h2 class="sec-title">Technical <em>Skills</em></h2>
     <div class="sec-divider"></div>
   </div>
+
   <div class="skills-layout">
     <div class="reveal-l">
       <p class="skills-intro">
-        With a foundation in <strong>PHP full-stack development</strong> and 
-        a passion for data-driven solutions, I build systems that bridge 
-        elegant design with robust engineering. From <strong>Shopify storefronts</strong> 
-        to <strong>Power BI dashboards</strong>, every tool is chosen with purpose.
+        A versatile <strong>PHP Full-Stack Developer and Data Analytics Professional</strong>
+        with experience in web development, data analysis, AI-driven solutions,
+        and database technologies. I combine technical expertise with creative
+        problem-solving to build scalable and user-focused digital solutions.
       </p>
+
       <p class="skills-intro" style="margin-top:1.5rem;">
-        I specialise in translating complex business requirements into 
-        <strong>clean, maintainable code</strong> — backed by years of 
-        cross-functional collaboration across development, analytics, 
-        and creative media.
+        From <strong>responsive websites and interactive dashboards</strong> to
+        <strong>machine learning and AI applications</strong>, I transform
+        business requirements into clean, efficient, and practical solutions
+        using modern technologies.
       </p>
     </div>
+
     <div class="skills-3d-grid">
+
       <div class="skill-card reveal d1">
         <div class="skill-card-inner">
           <span class="skill-icon-3d">⚡</span>
-          <div class="skill-name">Full-Stack</div>
+          <div class="skill-name">Full-Stack Development</div>
           <div class="skill-tags-wrap">
-            <span class="stag">PHP</span><span class="stag">Website Dev</span><span class="stag">Landing Pages</span>
+            <span class="stag">PHP</span>
+            <span class="stag">Python</span>
+            <span class="stag">JavaScript</span>
           </div>
         </div>
       </div>
+
       <div class="skill-card reveal d2">
         <div class="skill-card-inner">
           <span class="skill-icon-3d">🎨</span>
-          <div class="skill-name">Front-End</div>
+          <div class="skill-name">Front-End & UI/UX</div>
           <div class="skill-tags-wrap">
-            <span class="stag">HTML5</span><span class="stag">CSS3</span><span class="stag">React.js</span><span class="stag">AngularJS</span><span class="stag">Shopify</span>
+            <span class="stag">HTML</span>
+            <span class="stag">CSS</span>
+            <span class="stag">JavaScript</span>
+            <span class="stag">React.js</span>
+            <span class="stag">Figma</span>
+            <span class="stag">Shopify</span>
           </div>
         </div>
       </div>
@@ -1075,41 +1125,67 @@ footer{
           <span class="skill-icon-3d">🔧</span>
           <div class="skill-name">Back-End</div>
           <div class="skill-tags-wrap">
-            <span class="stag">PHP</span><span class="stag">Python</span><span class="stag">Java</span><span class="stag">Express.js</span><span class="stag">C/C++</span>
-          </div>
-        </div>
-      </div>
-      <div class="skill-card reveal d4">
-        <div class="skill-card-inner">
-          <span class="skill-icon-3d">🗄️</span>
-          <div class="skill-name">Databases</div>
-          <div class="skill-tags-wrap">
-            <span class="stag">MySQL</span><span class="stag">SQLite</span><span class="stag">MongoDB</span>
-          </div>
-        </div>
-      </div>
-      <div class="skill-card reveal d2">
-        <div class="skill-card-inner">
-          <span class="skill-icon-3d">📊</span>
-          <div class="skill-name">Analytics</div>
-          <div class="skill-tags-wrap">
-            <span class="stag">Power BI</span><span class="stag">Python</span><span class="stag">Gen-AI</span><span class="stag">Excel</span>
+            <span class="stag">PHP</span>
+            <span class="stag">Python</span>
+            <span class="stag">Java</span>
+            <span class="stag">C/C++</span>
           </div>
         </div>
       </div>
       <div class="skill-card reveal d3">
         <div class="skill-card-inner">
-          <span class="skill-icon-3d">🛠️</span>
-          <div class="skill-name">Tools & Design</div>
+          <span class="skill-icon-3d">🤖</span>
+          <div class="skill-name">Data Science & AI</div>
           <div class="skill-tags-wrap">
-            <span class="stag">Figma</span><span class="stag">Canva</span><span class="stag">Premiere</span><span class="stag">Final Cut</span><span class="stag">Wix</span>
+            <span class="stag">Python</span>
+            <span class="stag">Machine Learning</span>
+            <span class="stag">Deep Learning</span>
+            <span class="stag">NLP</span>
+            <span class="stag">Gen-AI</span>
+          </div>
+        </div>
+      </div>
+      <div class="skill-card reveal d4">
+        <div class="skill-card-inner">
+          <span class="skill-icon-3d">📊</span>
+          <div class="skill-name">Data Analytics</div>
+          <div class="skill-tags-wrap">
+            <span class="stag">Power BI</span>
+            <span class="stag">Pandas</span>
+            <span class="stag">NumPy</span>
+            <span class="stag">EDA</span>
+            <span class="stag">Data Visualization</span>
+          </div>
+        </div>
+      </div>
+      <div class="skill-card reveal d2">
+        <div class="skill-card-inner">
+          <span class="skill-icon-3d">🗄️</span>
+          <div class="skill-name">Databases</div>
+          <div class="skill-tags-wrap">
+            <span class="stag">PostgreSQL</span>
+            <span class="stag">SQLite</span>
+            <span class="stag">MySQL</span>
+          </div>
+        </div>
+      </div>
+      <div class="skill-card reveal d3">
+        <div class="skill-card-inner">
+          <span class="skill-icon-3d">☁️</span>
+          <div class="skill-name">Cloud & Tools</div>
+          <div class="skill-tags-wrap">
+            <span class="stag">AWS</span>
+            <span class="stag">FastAPI</span>
+            <span class="stag">Streamlit</span>
+            <span class="stag">Git</span>
+            <span class="stag">Canva</span>
+            <span class="stag">Figma</span>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 <!-- ======= EXPERIENCE ======= -->
 <section id="experience">
   <div class="sec-header reveal">
@@ -1117,23 +1193,27 @@ footer{
     <h2 class="sec-title">Professional <em>Experience</em></h2>
     <div class="sec-divider"></div>
   </div>
+
   <div class="exp-timeline">
 
+    <!-- KALS GROUP -->
     <div class="exp-item reveal">
       <div class="exp-diamond"></div>
       <div class="exp-3d-card">
         <div class="exp-period">May 2024 — July 2025</div>
-        <div class="exp-role">Back-End Developer · Business Development Executive</div>
+        <div class="exp-role">Business Development Executive · Back-End Developer</div>
         <div class="exp-company">KALS Group of Companies</div>
         <div class="exp-desc">
-          Architected and deployed the official KALS Group corporate website alongside internal sales management systems. 
-          Leveraged Excel and Power BI to perform comprehensive sales data analysis, delivering actionable business intelligence 
-          to leadership. Coordinated promotional campaigns, managed vendor assignment workflows, and collaborated cross-functionally 
-          to drive measurable improvements in reporting efficiency and sales strategy.
+          Developed and maintained the official KALS Group website and supporting
+          sales systems. Analyzed sales data using Excel and Power BI to generate
+          actionable business insights. Supported product promotions, coordinated
+          with vendors, and collaborated with teams to improve sales and reporting
+          processes.
         </div>
       </div>
     </div>
 
+    <!-- NINT -->
     <div class="exp-item reveal">
       <div class="exp-diamond"></div>
       <div class="exp-3d-card">
@@ -1141,36 +1221,24 @@ footer{
         <div class="exp-role">Programming Mentor</div>
         <div class="exp-company">NINT Private Limited</div>
         <div class="exp-desc">
-          Mentored aspiring developers in foundational and intermediate programming, covering C, C++, Python, and Java. 
-          Designed structured learning modules and delivered hands-on sessions that improved student outcomes and confidence 
-          in software engineering fundamentals.
+          Guided students in programming fundamentals. Delivered hands-on training in C, C++, Python, and Java,
+          helping learners strengthen their programming and problem-solving skills.
         </div>
       </div>
     </div>
 
+    <!-- SEVIKA TECH -->
     <div class="exp-item reveal">
       <div class="exp-diamond"></div>
       <div class="exp-3d-card">
-        <div class="exp-period">Sep — Dec · Internship</div>
+        <div class="exp-period">September 2023 — December 2023</div>
         <div class="exp-role">Web Developer Intern</div>
         <div class="exp-company">Sevika Tech Private Limited</div>
         <div class="exp-desc">
-          Contributed to live web development projects, digital marketing initiatives, and creative poster design. 
-          Participated in basic game development sprints and collaborated with HR teams for internal digital support. 
-          Successfully deployed a dynamic educational website as a live production project.
-        </div>
-      </div>
-    </div>
-
-    <div class="exp-item reveal">
-      <div class="exp-diamond"></div>
-      <div class="exp-3d-card">
-        <div class="exp-period">Internship</div>
-        <div class="exp-role">Business Development Intern</div>
-        <div class="exp-company">Sureti IMF Pvt. Ltd.</div>
-        <div class="exp-desc">
-          Supported the business development function through market research, client outreach, and preparation of 
-          professional business proposals. Developed interpersonal skills in client communication and strategic planning.
+          Contributed to web development projects, digital marketing activities,
+          and creative poster design. Assisted in creating and maintaining digital
+          content while gaining practical experience in web technologies and
+          digital media.
         </div>
       </div>
     </div>
@@ -1187,93 +1255,115 @@ footer{
   </div>
   <div class="projects-3d-grid">
 
-    <div class="proj-card reveal d1">
+    <div class="proj-card reveal d1" data-link="https://www.figma.com/proto/v5xLNlDxDNfxWQhPfB8YlE/Untitled?page-id=24%3A19&node-id=27-164&viewport=-497%2C-524%2C0.53&t=rf3LSodqZeylewP8-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=27%3A164">
       <div class="proj-card-body">
         <div class="proj-num">01</div>
         <div class="proj-type">UI / UX Design</div>
         <div class="proj-title">Analytics Avenue — Landing Page Prototype</div>
         <div class="proj-desc">Designed a modern, responsive landing page in Figma with strong visual hierarchy, user-centric layout, and conversion-focused sections demonstrating front-end–ready design systems.</div>
         <div class="proj-chips"><span class="chip">Figma</span><span class="chip">UI/UX</span><span class="chip">Prototyping</span></div>
+        <div class="proj-view-hint">View Prototype ↗</div>
       </div>
     </div>
 
-    <div class="proj-card reveal d2">
-      <div class="proj-card-body">
-        <div class="proj-num">02</div>
-        <div class="proj-type">Full-Stack Application</div>
-        <div class="proj-title">Analytics Avenue — PHP Form System</div>
-        <div class="proj-desc">Built a PHP–SQLite–JavaScript application managing hiring, onboarding, and task submission with secure server-side data storage and a polished user interface.</div>
-        <div class="proj-chips"><span class="chip">PHP</span><span class="chip">SQLite</span><span class="chip">JavaScript</span></div>
-      </div>
-    </div>
-
-    <div class="proj-card reveal d3">
+    <div class="proj-card reveal d3" data-link="https://mai-task.myshopify.com/password">
       <div class="proj-card-body">
         <div class="proj-num">03</div>
         <div class="proj-type">E-Commerce</div>
         <div class="proj-title">Shopify Store — UK Marble Company</div>
         <div class="proj-desc">Built a custom Shopify store with dynamic pricing, bundled product logic, and a fully responsive design optimised for premium user experience for a UK-based marble company.</div>
         <div class="proj-chips"><span class="chip">Shopify</span><span class="chip">Liquid</span><span class="chip">Responsive</span></div>
+        <div class="proj-pass">Store password: MAI</div>
+        <div class="proj-view-hint">View Store ↗</div>
       </div>
     </div>
 
-    <div class="proj-card reveal d1">
+    <div class="proj-card reveal d1" data-link="https://pearltechlab.myshopify.com/password">
       <div class="proj-card-body">
         <div class="proj-num">04</div>
         <div class="proj-type">E-Commerce</div>
         <div class="proj-title">Shopify Store — Coaching Centre Books</div>
         <div class="proj-desc">Developed a customised Shopify storefront for a coaching centre enabling book and material sales, with intuitive content management and mobile-first design.</div>
         <div class="proj-chips"><span class="chip">Shopify</span><span class="chip">Liquid</span><span class="chip">CMS</span></div>
+        <div class="proj-pass">Store password: Ecom</div>
+        <div class="proj-view-hint">View Store ↗</div>
       </div>
     </div>
 
-    <div class="proj-card reveal d2">
+    <div class="proj-card reveal d2" data-link="https://kals.co.in/Promotion-Item/SalesForm/SalesReport.html">
       <div class="proj-card-body">
         <div class="proj-num">05</div>
         <div class="proj-type">Full-Stack · Cloud</div>
         <div class="proj-title">Full-Stack Sales Monitoring System</div>
-        <div class="proj-desc">Engineered a secure sales tracking and reporting platform using PHP, SQLite, and cloud integration — improving reporting accuracy, daily sales reporting, and operational efficiency.</div>
+        <div class="proj-desc">Engineered a secure sales tracking and reporting platform using HTML, CSS, JavaScript, PHP, and SQLite with cloud integration — improving reporting accuracy and operational efficiency.</div>
         <div class="proj-chips"><span class="chip">PHP</span><span class="chip">SQLite</span><span class="chip">Cloud</span><span class="chip">JS</span></div>
+        <div class="proj-links">
+          <a class="proj-link" href="https://kals.co.in/Promotion-Item/SalesForm/SalesReport.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Daily Sales Report ↗</a>
+          <a class="proj-link" href="https://kals.co.in/Promotion-Item/Region&Depot-WiseReport.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Region &amp; Depot Report ↗</a>
+        </div>
       </div>
     </div>
 
-    <div class="proj-card reveal d3">
-      <div class="proj-card-body">
-        <div class="proj-num">06</div>
-        <div class="proj-type">Data Analytics</div>
-        <div class="proj-title">KALS Sales Growth Analytics Dashboard</div>
-        <div class="proj-desc">Analysed KALS sales performance using Python and Power BI — cleaning Excel datasets and producing state-, depot-, and shop-wise visual dashboards for executive decision-making.</div>
-        <div class="proj-chips"><span class="chip">Python</span><span class="chip">Power BI</span><span class="chip">Excel</span></div>
-      </div>
-    </div>
-
-    <div class="proj-card reveal d1">
+    <div class="proj-card reveal d1" data-link="https://kals.co.in/Promotion-Item/promotion_item_tracking.html">
       <div class="proj-card-body">
         <div class="proj-num">07</div>
         <div class="proj-type">Database System</div>
         <div class="proj-title">Vendor & Promotion Assignment System</div>
         <div class="proj-desc">Developed a database-driven application to streamline promotion requests and automate vendor assignment, measurably improving workflow productivity and management decisions.</div>
         <div class="proj-chips"><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">Automation</span></div>
+        <div class="proj-links">
+          <a class="proj-link" href="https://kals.co.in/Promotion-Item/promotion_item_tracking.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Promotion Tracking ↗</a>
+          <a class="proj-link" href="https://kals.co.in/Promotion-Item/VendorForm/vendor_details_form.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Vendor Form ↗</a>
+          <a class="proj-link" href="https://kals.co.in/Promotion-Item/ReqForm/RequestForm.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Request Form ↗</a>
+        </div>
       </div>
     </div>
 
-    <div class="proj-card reveal d2">
+    <div class="proj-card reveal d2" data-link="https://pathsolution.netlify.app/">
       <div class="proj-card-body">
         <div class="proj-num">08</div>
-        <div class="proj-type">Video Production</div>
-        <div class="proj-title">Brand Promotional Video Series — KALS Group</div>
-        <div class="proj-desc">Conceptualised, created, and edited brand reveal, product launch, and coming-soon promotional videos — including a Foster's Cool Blue Lager launch screened in top-class resto-bars.</div>
-        <div class="proj-chips"><span class="chip">Premiere Pro</span><span class="chip">Final Cut Pro</span><span class="chip">CapCut</span></div>
+        <div class="proj-type">Web Development</div>
+        <div class="proj-title">Path Solutions — Educational Website</div>
+        <div class="proj-desc">Developed and launched a dynamic educational website at Sevika Tech Private Limited, marking a successful live project deployment for an ed-tech client.</div>
+        <div class="proj-chips"><span class="chip">Web Dev</span><span class="chip">Netlify</span><span class="chip">Responsive</span></div>
+        <div class="proj-view-hint">Visit Site ↗</div>
       </div>
     </div>
 
     <div class="proj-card reveal d3">
       <div class="proj-card-body">
         <div class="proj-num">09</div>
+        <div class="proj-type">Video Production</div>
+        <div class="proj-title">Brand Promotional Video Series — KALS Group</div>
+        <div class="proj-desc">Conceptualised, created, and edited brand reveal, product launch, and coming-soon promotional videos — including a Foster's Cool Blue Lager launch screened in top-class resto-bars.</div>
+        <div class="proj-chips"><span class="chip">Premiere Pro</span><span class="chip">Final Cut Pro</span><span class="chip">CapCut</span></div>
+        <div class="proj-links">
+          <a class="proj-link" href="https://drive.google.com/file/d/1gr8NMAendVYQU-smMqAolDHfWifsT0rv/view?usp=sharing" target="_blank" rel="noopener" onclick="event.stopPropagation()">KALS Reveal ↗</a>
+          <a class="proj-link" href="https://drive.google.com/file/d/1MlP9NOXvq2hKiB2iIDOTJxlQ1SLCOSA1/view?usp=sharing" target="_blank" rel="noopener" onclick="event.stopPropagation()">Beer Countdown ↗</a>
+          <a class="proj-link" href="https://www.instagram.com/reels/C-7v62ktuzT/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Foster's Launch (IG) ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal d1" data-link="https://www.linkedin.com/posts/muthuraj-b-909ab8281_data-project-medical-activity-7082014104961380352-4K4X/?utm_source=share&utm_medium=member_android">
+      <div class="proj-card-body">
+        <div class="proj-num">10</div>
+        <div class="proj-type">MCA Mini Project</div>
+        <div class="proj-title">Medical Activity Login System — Firebase</div>
+        <div class="proj-desc">Created a secure MCA mini project at Dhanalakshmi Srinivasan Medical College, featuring login and registration pages connected to Firebase for data storage, with a user-friendly home page.</div>
+        <div class="proj-chips"><span class="chip">Firebase</span><span class="chip">Auth</span><span class="chip">JavaScript</span></div>
+        <div class="proj-view-hint">View Post ↗</div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal d2 no-link">
+      <div class="proj-card-body">
+        <div class="proj-num">11</div>
         <div class="proj-type">IoT · Cloud</div>
         <div class="proj-title">IoT Fire Safety Monitoring System</div>
         <div class="proj-desc">Developed a remote warehouse fire safety system with IoT sensors and cloud alerting that autonomously activates fire suppression equipment during emergencies.</div>
         <div class="proj-chips"><span class="chip">IoT</span><span class="chip">Cloud</span><span class="chip">Sensors</span><span class="chip">Automation</span></div>
+        <div class="proj-locked-tag">Not Publicly Deployed</div>
       </div>
     </div>
 
@@ -1282,13 +1372,14 @@ footer{
 
 <!-- ======= CERTIFICATIONS ======= -->
 <section id="certifications">
-  <div class="sec-header reveal">
-    <div class="sec-label">Credentials</div>
-    <h2 class="sec-title">Certifications &amp; <em>Achievements</em></h2>
-    <div class="sec-divider"></div>
-  </div>
+    <div class="sec-header reveal">
+      <div class="sec-label">Credentials</div>
+      <h2 class="sec-title">Certifications &amp; <em>Achievements</em></h2>
+      <div class="sec-divider"></div>
+    </div>
   <div class="certs-grid">
 
+  <div class="proj-card reveal d3" data-link="https://www.linkedin.com/posts/muthuraj-b-909ab8281_i-have-successfully-completed-and-earned-activity-7086327603409661952-pnFc?utm_source=share&utm_medium=member_android">
     <div class="cert-card reveal d1">
       <div class="cert-card-inner">
         <div class="cert-icon">🏅</div>
@@ -1298,16 +1389,19 @@ footer{
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="cert-card reveal d2">
-      <div class="cert-card-inner">
-        <div class="cert-icon">🎮</div>
-        <div class="cert-body">
-          <strong>Game Development &amp; Data Engineering / Big Data</strong>
-          <p>Successfully completed both Pygame game development and comprehensive Data Engineering courses via the Guvi e-learning platform.</p>
+  <div class="proj-card reveal d3" data-link="https://www.guvi.in/verify-certificate?id=304wC8140778tmP30U">
+      <div class="cert-card reveal d2">
+        <div class="cert-card-inner">
+          <div class="cert-icon">🎮</div>
+          <div class="cert-body">
+            <strong>Game Development &amp; Data Engineering / Big Data</strong>
+            <p>Successfully completed both Pygame game development and comprehensive Data Engineering courses via the Guvi e-learning platform.</p>
+          </div>
         </div>
       </div>
-    </div>
+  </div>
 
     <div class="cert-card reveal d3">
       <div class="cert-card-inner">
@@ -1572,6 +1666,15 @@ window.addEventListener('scroll', () => {
     a.style.color = active ? 'var(--gold)' : '';
   });
 }, { passive: true });
+
+/* -------- PROJECT CARD CLICK-TO-OPEN -------- */
+document.querySelectorAll('.proj-card[data-link]').forEach(card => {
+  card.addEventListener('click', (e) => {
+    if (e.target.closest('.proj-link')) return; // let sub-links handle their own click
+    const url = card.getAttribute('data-link');
+    if (url) window.open(url, '_blank', 'noopener');
+  });
+});
 
 /* -------- SKILL CARD TILT (mouse follow) -------- */
 document.querySelectorAll('.skill-card,.proj-card,.edu-card,.cert-card,.exp-3d-card').forEach(card => {
